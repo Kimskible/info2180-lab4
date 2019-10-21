@@ -2,13 +2,19 @@
  const state = ['X', 'O'];
  var check = 0;
 
-//Load page before js
-window.onload = () => {
-  boardtable();
+//Setting Grids on page + displaying squares
+ const boardtable = () => {
+  var board = document.getElementById("board");
+  var blocks = board.getElementsByTagName("div");
+//Loop to add square
+  for (let i = 0; i < blocks.length; i++) {
+    blocks[i].className = "square";
+  }  
+}
 
-  //Adding an X or O
-  board.addEventListener("click", (e) =>{
-    if (e.target.nodeName === "DIV") {
+
+function XorO(e) {
+  if (e.target.nodeName === "DIV") {
 
       if (state[check] == 'X') {
          e.target.classList.add("X");
@@ -21,16 +27,28 @@ window.onload = () => {
       }
     // console.log(e.target.nodeName);
     }
-  })
+  
 }
 
-//Setting Grids on page + displaying squares
-const boardtable = () => {
-  var board = document.getElementById("board");
+function hoverOver(e) {
   var blocks = board.getElementsByTagName("div");
 
-  for (let i = 0; i < blocks.length; i++) {
-    blocks[i].className = "square";
-  }  
+  if (e.target.classList.contains("square")) { 
+
+    for (let i = 0; i < blocks.length; i++) {
+      blocks[i].classList.remove("hover");
+    }
+    e.target.classList.add("hover");
+  }
 }
+
+
+//Load page before js
+window.onload = () => {
+  boardtable();
+  board.addEventListener("mouseover", hoverOver);
+  //Adding an X or O
+  board.addEventListener("click", XorO);
+}
+
 
