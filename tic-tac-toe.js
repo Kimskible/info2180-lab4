@@ -50,11 +50,11 @@ function winner() {
   if (blocks[0].innerHTML == blocks[1].innerHTML && blocks[0].innerHTML == blocks[2].innerHTML) {
 
       if (blocks[0].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if(blocks[0].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
       }
       
@@ -62,11 +62,11 @@ function winner() {
   //Second Row
   if (blocks[3].innerHTML == blocks[4].innerHTML && blocks[3].innerHTML == blocks[5].innerHTML) {
       if (blocks[3].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if (blocks[3].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
       }
   }
@@ -74,11 +74,11 @@ function winner() {
 if (blocks[6].innerHTML == blocks[7].innerHTML && blocks[6].innerHTML == blocks[8].innerHTML) {
 
       if (blocks[6].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if (blocks[6].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
 
       }
@@ -87,11 +87,11 @@ if (blocks[6].innerHTML == blocks[7].innerHTML && blocks[6].innerHTML == blocks[
 if (blocks[0].innerHTML == blocks[3].innerHTML && blocks[0].innerHTML == blocks[6].innerHTML) {
 
       if (blocks[0].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if (blocks[0].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
 
       }
@@ -100,11 +100,11 @@ if (blocks[0].innerHTML == blocks[3].innerHTML && blocks[0].innerHTML == blocks[
 if (blocks[1].innerHTML == blocks[4].innerHTML && blocks[1].innerHTML == blocks[7].innerHTML) {
 
       if (blocks[1].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if (blocks[1].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
 
       }
@@ -113,11 +113,11 @@ if (blocks[1].innerHTML == blocks[4].innerHTML && blocks[1].innerHTML == blocks[
 if (blocks[2].innerHTML == blocks[5].innerHTML && blocks[2].innerHTML == blocks[8].innerHTML) {
 
       if (blocks[2].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if (blocks[2].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
 
       }
@@ -126,11 +126,11 @@ if (blocks[2].innerHTML == blocks[5].innerHTML && blocks[2].innerHTML == blocks[
 if (blocks[0].innerHTML == blocks[4].innerHTML && blocks[0].innerHTML == blocks[8].innerHTML) {
 
       if (blocks[0].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if (blocks[0].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
 
       }
@@ -139,11 +139,11 @@ if (blocks[0].innerHTML == blocks[4].innerHTML && blocks[0].innerHTML == blocks[
 if (blocks[2].innerHTML == blocks[4].innerHTML && blocks[2].innerHTML == blocks[6].innerHTML) {
 
       if (blocks[2].innerHTML == "X" ) {
-        status.innerHTML = "Congratulations! X is the Winner!";
+        status.innerHTML = "Congratulations! X is the Winner!";
         status.classList.add("you-won");
 
       } else if (blocks[2].innerHTML == "O"){
-        status.innerHTML = "Congratulations! O is the Winner!";
+        status.innerHTML = "Congratulations! O is the Winner!";
         status.classList.add("you-won");
       }
   }
@@ -158,5 +158,3 @@ window.onload = () => {
   //Adding an X or O
   board.addEventListener("click", XorO);
 }
-
-
