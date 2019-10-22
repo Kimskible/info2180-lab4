@@ -17,11 +17,11 @@ function XorO(e) {
 
   if (e.target.classList.contains("square")) {
 
-      if (state[check] == 'X') {
+      if (state[check] == 'X' && e.target.innerHTML == '') {
          e.target.classList.add("X");
          e.target.innerHTML = "X";
          check++;
-      } else {
+      } else if (state[check] == 'O' && e.target.innerHTML == ''){
         e.target.classList.add("O");
         e.target.innerHTML = "O";
         check--;
@@ -29,7 +29,7 @@ function XorO(e) {
   }
      winner();
 }
-
+//Hover over squares
 function hoverOver(e) {
   var blocks = board.getElementsByTagName("div");
   if (e.target.classList.contains("square")) { 
@@ -40,7 +40,6 @@ function hoverOver(e) {
     e.target.classList.add("hover");
   }
 }
-
 //Hardcode to find the winner - Praises thats its a 3x3 grid
 function winner() {
   var board = document.getElementById("board");
@@ -150,7 +149,7 @@ if (blocks[2].innerHTML == blocks[4].innerHTML && blocks[2].innerHTML == blocks[
   }
 
 }
-
+//Reset the game
 function newgame(e) {
   var board = document.getElementById("board");
   var blocks = board.getElementsByTagName("div");
@@ -176,6 +175,8 @@ function newgame(e) {
   }
 
 }
+
+
 
 
 //Load page before js
