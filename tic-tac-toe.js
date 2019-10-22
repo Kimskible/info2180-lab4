@@ -6,6 +6,7 @@
  const boardtable = () => {
   var board = document.getElementById("board");
   var blocks = board.getElementsByTagName("div");
+  var game = document.getElementById("game")
 //Loop to add square
   for (let i = 0; i < blocks.length; i++) {
     blocks[i].className = "square";
@@ -14,7 +15,7 @@
 
 function XorO(e) {
 
-  if (e.target.nodeName === "DIV") {
+  if (e.target.classList.contains("square")) {
 
       if (state[check] == 'X') {
          e.target.classList.add("X");
@@ -150,6 +151,32 @@ if (blocks[2].innerHTML == blocks[4].innerHTML && blocks[2].innerHTML == blocks[
 
 }
 
+function newgame(e) {
+  var board = document.getElementById("board");
+  var blocks = board.getElementsByTagName("div");
+  let status = document.getElementById("status");
+
+  if(e.target.nodeName === 'BUTTON'){
+
+    status.classList.remove("you-won");
+    status.innerHTML = "Move your mouse over a square and click to play an X or an O.";
+   
+    for (let i = 0; i < blocks.length; i++) {
+
+      if(blocks[i].innerHTML == "X"){
+        blocks[i].innerHTML = "";
+        blocks[i].classList.remove("X");
+
+      } else if(blocks[i].innerHTML == "O") {
+        blocks[i].innerHTML = "";
+        blocks[i].classList.remove("O");
+      } 
+
+    }
+  }
+
+}
+
 
 //Load page before js
 window.onload = () => {
@@ -157,4 +184,6 @@ window.onload = () => {
   board.addEventListener("mouseover", hoverOver);
   //Adding an X or O
   board.addEventListener("click", XorO);
+  //button for new game
+  game.addEventListener("click", newgame);
 }
